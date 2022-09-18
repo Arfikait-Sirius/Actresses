@@ -6,9 +6,6 @@ object Tina {
     private val LABEL_JUDGE = "[     JUDGE]: "
     private val LABEL_PRINT = "[     PRINT]: "
 
-    private var girlName = ""
-    private var skillName = ""
-
     /** ----------------------
      * :[ NAME ]:
      *     fnSetGirlName
@@ -17,9 +14,8 @@ object Tina {
      *     Skill
      * -------------------- */
     fun fnSetGirlName( name: String ): Unit {
-        girlName = name
 
-        println( "$LABEL_GIRLS_NAME$girlName" )
+        println( "$LABEL_GIRLS_NAME$name" )
 
         return
     }
@@ -32,9 +28,8 @@ object Tina {
      *     Skill
      * -------------------- */
     fun fnSetSkillName( target: String ): Unit {
-        skillName = target
 
-        println( "$LABEL_TARGET$skillName" )
+        println( "$LABEL_TARGET$target" )
 
         return
     }
@@ -51,7 +46,7 @@ object Tina {
         if( judgement ){
             println( "${LABEL_JUDGE}OK" )
         } else {
-            println( "${LABEL_JUDGE}NG - Please check $skillName" )
+            println( "${LABEL_JUDGE}NG - Please check this source." )
         }
 
         return
