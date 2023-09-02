@@ -15,6 +15,27 @@ object Louise {
 
     /** ----------------------
      * :[ NAME ]:
+     *     fnCount
+     *
+     * :[ CATEGORY ]:
+     *     Skill
+     * -------------------- */
+     fun fnCount( base: String, target: String ): Int {
+          var count = 0
+          var index = base.indexOf( target )
+          var s = base.substring( index + 1 )
+
+          while( index != -1 ){
+               count++
+               index = s.indexOf( target )
+               s = s.substring( index + 1 )
+          }
+
+          return count
+     }
+
+    /** ----------------------
+     * :[ NAME ]:
      *     fnReplace
      *
      * :[ CATEGORY ]:
